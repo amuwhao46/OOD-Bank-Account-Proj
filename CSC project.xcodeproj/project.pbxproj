@@ -42,6 +42,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CA8CB3F82627D1A400421626 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				CAC999772624BE4A00ECE04F /* CheckingAccount.h */,
+				CAC999782624BE5400ECE04F /* CD.h */,
+				CAC999792624BE6400ECE04F /* SavingsAccount.h */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
 		CAC999632624BD4700ECE04F = {
 			isa = PBXGroup;
 			children = (
@@ -62,10 +72,8 @@
 			isa = PBXGroup;
 			children = (
 				CAC9996F2624BD4700ECE04F /* main.cpp */,
-				CAC999772624BE4A00ECE04F /* CheckingAccount.h */,
 				CA8CB3F72627BDA600421626 /* BankAccount.h */,
-				CAC999782624BE5400ECE04F /* CD.h */,
-				CAC999792624BE6400ECE04F /* SavingsAccount.h */,
+				CA8CB3F82627D1A400421626 /* Header */,
 			);
 			path = "CSC project";
 			sourceTree = "<group>";

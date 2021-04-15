@@ -9,10 +9,11 @@
 #define CheckingAccount_h
 
 #include <iostream> // For cin, cout, and system
+#include "bankAccount.h"
 using namespace std;
 
 // Abstract class
-class checkingAccount {
+class checkingAccount: bankAccount {
     
 public:
     
