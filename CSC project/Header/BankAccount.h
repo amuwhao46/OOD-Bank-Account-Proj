@@ -10,6 +10,7 @@
 
 #include <string> // For string data type
 #include <iostream> // For cin, cout, and system
+#include <iomanip> // For formatted output
 using namespace std;
 
 // Abstract class
@@ -22,9 +23,11 @@ public:
     
     virtual void retrieveBalance() = 0;
     
-    virtual void withdrawMoney() = 0;
+    int accountNum() const;
     
-    virtual void createMonthlyInst() = 0;
+    void withdrawMoney(int money);
+    
+    void createMonthlyInst(int installment);
     
     string name;
     int accountNumber;

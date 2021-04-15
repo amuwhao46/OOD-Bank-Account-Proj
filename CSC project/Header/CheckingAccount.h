@@ -9,6 +9,7 @@
 #define CheckingAccount_h
 
 #include <iostream> // For cin, cout, and system
+#include <iomanip> // For formatted output
 #include "BankAccount.h"
 using namespace std;
 
@@ -16,7 +17,7 @@ using namespace std;
 class checkingAccount: bankAccount {
     
 public:
-    
+    virtual void writeCheck() = 0;
 private:
 };
 
