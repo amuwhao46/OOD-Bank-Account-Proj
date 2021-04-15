@@ -8,6 +8,10 @@
 #ifndef BankAccount_h
 #define BankAccount_h
 
+#include <string> // For string data type
+#include <iostream> // For cin, cout, and system
+using namespace std;
+
 // Abstract class
 class bankAccount {
     

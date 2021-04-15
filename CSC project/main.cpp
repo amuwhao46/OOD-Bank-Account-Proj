@@ -16,8 +16,12 @@
 #include <iostream> // For cin, cout, and system
 #include <string> // For string data type
 #include <cmath> // For math
-#include "bankAccount.h"
+#include "BankAccount.h"
 #include "CheckingAccount.h"
+#include "ServiceChargeChecking.h"
+#include "NoServiceChargeChecking.h"
+#include "HighInterestChecking.h"
+#include "HighInterestSavings.h"
 #include "CD.h"
 #include "SavingsAccount.h"
 using namespace std; // So "std::cout" may be abbreviated to "cout"

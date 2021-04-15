@@ -24,6 +24,10 @@
 
 /* Begin PBXFileReference section */
 		CA8CB3F72627BDA600421626 /* BankAccount.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BankAccount.h; sourceTree = "<group>"; };
+		CA8CB3F92627D36A00421626 /* ServiceChargeChecking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ServiceChargeChecking.h; sourceTree = "<group>"; };
+		CA8CB3FA2627D37D00421626 /* NoServiceChargeChecking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NoServiceChargeChecking.h; sourceTree = "<group>"; };
+		CA8CB3FC2627D3C000421626 /* HighInterestChecking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HighInterestChecking.h; sourceTree = "<group>"; };
+		CA8CB3FD2627D3F900421626 /* HighInterestSavings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HighInterestSavings.h; sourceTree = "<group>"; };
 		CAC9996C2624BD4700ECE04F /* CSC project */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "CSC project"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAC9996F2624BD4700ECE04F /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		CAC999772624BE4A00ECE04F /* CheckingAccount.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CheckingAccount.h; sourceTree = "<group>"; };
@@ -46,10 +50,30 @@
 			isa = PBXGroup;
 			children = (
 				CAC999772624BE4A00ECE04F /* CheckingAccount.h */,
-				CAC999782624BE5400ECE04F /* CD.h */,
+				CA8CB3FB2627D38400421626 /* Sub Checking Account */,
 				CAC999792624BE6400ECE04F /* SavingsAccount.h */,
+				CA8CB3FE2627D40A00421626 /* Sub Savings Account */,
+				CAC999782624BE5400ECE04F /* CD.h */,
 			);
 			path = Header;
+			sourceTree = "<group>";
+		};
+		CA8CB3FB2627D38400421626 /* Sub Checking Account */ = {
+			isa = PBXGroup;
+			children = (
+				CA8CB3F92627D36A00421626 /* ServiceChargeChecking.h */,
+				CA8CB3FA2627D37D00421626 /* NoServiceChargeChecking.h */,
+				CA8CB3FC2627D3C000421626 /* HighInterestChecking.h */,
+			);
+			path = "Sub Checking Account";
+			sourceTree = "<group>";
+		};
+		CA8CB3FE2627D40A00421626 /* Sub Savings Account */ = {
+			isa = PBXGroup;
+			children = (
+				CA8CB3FD2627D3F900421626 /* HighInterestSavings.h */,
+			);
+			path = "Sub Savings Account";
 			sourceTree = "<group>";
 		};
 		CAC999632624BD4700ECE04F = {
