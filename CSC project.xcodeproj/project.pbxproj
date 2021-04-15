@@ -49,6 +49,7 @@
 		CA8CB3F82627D1A400421626 /* Header */ = {
 			isa = PBXGroup;
 			children = (
+				CA8CB3F72627BDA600421626 /* BankAccount.h */,
 				CAC999772624BE4A00ECE04F /* CheckingAccount.h */,
 				CA8CB3FB2627D38400421626 /* Sub Checking Account */,
 				CAC999792624BE6400ECE04F /* SavingsAccount.h */,
@@ -96,7 +97,6 @@
 			isa = PBXGroup;
 			children = (
 				CAC9996F2624BD4700ECE04F /* main.cpp */,
-				CA8CB3F72627BDA600421626 /* BankAccount.h */,
 				CA8CB3F82627D1A400421626 /* Header */,
 			);
 			path = "CSC project";

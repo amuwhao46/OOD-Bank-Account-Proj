@@ -9,9 +9,10 @@
 #define CD_h
 
 #include <iostream> // For cin, cout, and system
+#include "BankAccount.h"
 using namespace std;
 
-class CD {
+class CD: bankAccount {
     
 public:
     
