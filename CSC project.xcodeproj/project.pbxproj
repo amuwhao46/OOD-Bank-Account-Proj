@@ -23,8 +23,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		CA8CB3F72627BDA600421626 /* BankAccount.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BankAccount.h; sourceTree = "<group>"; };
 		CAC9996C2624BD4700ECE04F /* CSC project */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "CSC project"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAC9996F2624BD4700ECE04F /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		CAC999772624BE4A00ECE04F /* CheckingAccount.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CheckingAccount.h; sourceTree = "<group>"; };
+		CAC999782624BE5400ECE04F /* CD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CD.h; sourceTree = "<group>"; };
+		CAC999792624BE6400ECE04F /* SavingsAccount.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SavingsAccount.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,10 @@
 			isa = PBXGroup;
 			children = (
 				CAC9996F2624BD4700ECE04F /* main.cpp */,
+				CAC999772624BE4A00ECE04F /* CheckingAccount.h */,
+				CA8CB3F72627BDA600421626 /* BankAccount.h */,
+				CAC999782624BE5400ECE04F /* CD.h */,
+				CAC999792624BE6400ECE04F /* SavingsAccount.h */,
 			);
 			path = "CSC project";
 			sourceTree = "<group>";
