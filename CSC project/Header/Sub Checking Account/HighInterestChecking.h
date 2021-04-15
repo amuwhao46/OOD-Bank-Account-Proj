@@ -9,6 +9,14 @@
 #define HighInterestChecking_h
 
 #include <iostream> // For cin, cout, and system
+#include "CheckingAccount.h"
 using namespace std;
+
+class highIntChecking: checkingAccount {
+    
+public:
+    
+private:
+};
 
 #endif /* HighInterestChecking_h */

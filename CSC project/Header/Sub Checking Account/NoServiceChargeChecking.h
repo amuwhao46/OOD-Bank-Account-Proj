@@ -9,6 +9,14 @@
 #define NoServiceChargeChecking_h
 
 #include <iostream> // For cin, cout, and system
+#include "CheckingAccount.h"
 using namespace std;
+
+class noServiceChecking: checkingAccount {
+    
+public:
+    
+private:
+};
 
 #endif /* NoServiceChargeChecking_h */
