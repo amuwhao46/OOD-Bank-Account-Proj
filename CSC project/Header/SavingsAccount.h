@@ -13,7 +13,7 @@
 #include "BankAccount.h"
 using namespace std;
 
-class savingsAccount: bankAccount {
+class savingsAccount: public bankAccount {
     
 public:
     

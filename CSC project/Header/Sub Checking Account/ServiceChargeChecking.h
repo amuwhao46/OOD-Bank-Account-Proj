@@ -13,7 +13,7 @@
 #include "CheckingAccount.h"
 using namespace std;
 
-class serviceChecking: checkingAccount {
+class serviceChecking: public checkingAccount {
     
 public:
     

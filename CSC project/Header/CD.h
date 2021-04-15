@@ -13,7 +13,7 @@
 #include "BankAccount.h"
 using namespace std;
 
-class CD: bankAccount {
+class CD: public bankAccount {
     
 public:
     

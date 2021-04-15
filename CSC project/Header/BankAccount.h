@@ -17,21 +17,25 @@ using namespace std;
 class bankAccount {
     
 public:
-    virtual void retrieveName() = 0;
+    void print();
+    virtual void retrieveName(string accName) = 0;
     
-    virtual void retrieveAccountNumber() = 0;
+    virtual void retrieveAccountNumber(int accNum) = 0;
     
-    virtual void retrieveBalance() = 0;
+    virtual void retrieveBalance(double accBalance) = 0;
     
-    int accountNum() const;
+    int accountNum(int number) const;
     
     void withdrawMoney(int money);
     
     void createMonthlyInst(int installment);
     
+    bankAccount(string accName, int accNum, double accBalance);
+    
+private:
     string name;
     int accountNumber;
-    int balance;
+    double balance;
     
 };
 

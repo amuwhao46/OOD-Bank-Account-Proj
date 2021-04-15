@@ -14,7 +14,7 @@
 using namespace std;
 
 // Abstract class
-class checkingAccount: bankAccount {
+class checkingAccount: public bankAccount {
     
 public:
     virtual void writeCheck() = 0;

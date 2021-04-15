@@ -13,7 +13,7 @@
 #include "CheckingAccount.h"
 using namespace std;
 
-class highIntChecking: checkingAccount {
+class highIntChecking: public checkingAccount {
     
 public:
     

@@ -13,7 +13,7 @@
 #include "SavingsAccount.h"
 using namespace std;
 
-class highIntSavings: savingsAccount {
+class highIntSavings: public savingsAccount {
     
 public:
     
