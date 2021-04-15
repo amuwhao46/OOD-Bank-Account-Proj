@@ -82,10 +82,10 @@
 			children = (
 				CA8CB3F72627BDA600421626 /* BankAccount.h */,
 				CAC999772624BE4A00ECE04F /* CheckingAccount.h */,
-				CA8CB3FB2627D38400421626 /* Sub Checking Account */,
 				CAC999792624BE6400ECE04F /* SavingsAccount.h */,
-				CA8CB3FE2627D40A00421626 /* Sub Savings Account */,
 				CAC999782624BE5400ECE04F /* CD.h */,
+				CA8CB3FB2627D38400421626 /* Sub Checking Account */,
+				CA8CB3FE2627D40A00421626 /* Sub Savings Account */,
 			);
 			path = Header;
 			sourceTree = "<group>";

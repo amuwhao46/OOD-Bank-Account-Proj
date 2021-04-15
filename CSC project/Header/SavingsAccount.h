@@ -16,8 +16,14 @@ using namespace std;
 class savingsAccount: public bankAccount {
     
 public:
+    void setInterest(int interestRate);
+    
+    void getInterest();
+    
+    savingsAccount(int interestRate);
     
 private:
+    int interest;
 };
 
 #endif /* SavingsAccount_h */

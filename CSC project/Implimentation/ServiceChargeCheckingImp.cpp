@@ -6,3 +6,8 @@
 //
 
 #include <stdio.h>
+#include <string> // For string data type
+#include <iostream> // For cin, cout, and system
+#include <iomanip> // For formatted output
+#include "ServiceChargeChecking.h"
+using namespace std;

@@ -16,8 +16,20 @@ using namespace std;
 class CD: public bankAccount {
     
 public:
+    void setCD(int numCDMonths, int interestRate, int CDMonths);
+    
+    void getNumCDMonths();
+    
+    void getInterestRate();
+    
+    void getCDMonths();
+    
+    CD(int numCDMonths, int interestRate, int CDMonths);
     
 private:
+    int numCDMonth;
+    int interest;
+    int CDMonth;
 };
 
 #endif /* CD_h */

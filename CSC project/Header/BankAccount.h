@@ -18,6 +18,9 @@ class bankAccount {
     
 public:
     void print();
+    
+    void setBankAccount(string accName, int accNum, double accBalance);
+    
     virtual void retrieveName(string accName) = 0;
     
     virtual void retrieveAccountNumber(int accNum) = 0;
@@ -28,13 +31,20 @@ public:
     
     void withdrawMoney(int money);
     
-    void createMonthlyInst(int installment);
+    void createMonthlyInst(int installments);
+    
+    void getName();
+    
+    void getAccountNumber();
+    
+    void getBalance();
     
     bankAccount(string accName, int accNum, double accBalance);
     
 private:
     string name;
     int accountNumber;
+    int installment;
     double balance;
     
 };
