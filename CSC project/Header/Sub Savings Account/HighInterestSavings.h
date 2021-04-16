@@ -18,6 +18,8 @@ class highIntSavings: public savingsAccount {
 public:
     
 private:
+    double balance;
+    
 };
 
 #endif /* HighInterestSavings_h */

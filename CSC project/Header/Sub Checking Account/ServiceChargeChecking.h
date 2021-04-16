@@ -16,8 +16,12 @@ using namespace std;
 class serviceChecking: public checkingAccount {
     
 public:
+    void checksPerMonth() const;
+    
     
 private:
+    int writtenChecks;
+    int month;
 };
 
 

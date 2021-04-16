@@ -10,14 +10,16 @@
 
 #include <iostream> // For cin, cout, and system
 #include <iomanip> // For formatted output
-#include "CheckingAccount.h"
+#include "NoServiceChargeChecking.h"
 using namespace std;
 
-class highIntChecking: public checkingAccount {
+class highIntChecking: public noServiceChecking {
     
 public:
     
 private:
+    double highInterest;
+    double highBalance;
 };
 
 #endif /* HighInterestChecking_h */

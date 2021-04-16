@@ -18,7 +18,7 @@ class checkingAccount: public bankAccount {
     
 public:
     virtual void writeCheck() = 0;
-private:
+
 };
 
 #endif /* CheckingAccount_h */

@@ -16,8 +16,12 @@ using namespace std;
 class noServiceChecking: public checkingAccount {
     
 public:
+    void paysInterest();
+    
     
 private:
+    double interest;
+    double balance;
 };
 
 #endif /* NoServiceChargeChecking_h */
