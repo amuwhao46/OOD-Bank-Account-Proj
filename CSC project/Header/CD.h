@@ -20,7 +20,7 @@ public:
     
     int getNumCDMonths();
     
-    double getInterestRate();
+    double getInterestRate() const;
     
     string getCDMonths();
     
@@ -28,7 +28,7 @@ public:
     
 private:
     int numCDMonth;
-    int interest;
+    double interest;
     string CDMonth;
 };
 

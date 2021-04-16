@@ -24,7 +24,7 @@ int CD::getNumCDMonths() {
     return numCDMonth;
 }
 
-double CD::getInterestRate() {
+double CD::getInterestRate() const {
     
     return interest;
 }
@@ -32,4 +32,12 @@ double CD::getInterestRate() {
 string CD::getCDMonths() {
     
     return CDMonth;
+}
+
+CD::CD(int numCDMonths, int interestRate, int CDMonths) {
+    
+    numCDMonth = numCDMonths;
+    interest = interestRate;
+    CDMonth = CDMonths;
+    
 }

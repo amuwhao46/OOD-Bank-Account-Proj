@@ -11,3 +11,18 @@
 #include <iomanip> // For formatted output
 #include "SavingsAccount.h"
 using namespace std;
+
+void savingsAccount::setInterest(double interestRate, double intPayment) {
+    
+    interest = interestRate;
+}
+
+double savingsAccount::getInterest() {
+    
+    return interest;
+}
+savingsAccount::savingsAccount(double interestRate, double intPayment) {
+    
+    interest = interestRate;
+    payment = intPayment;
+}

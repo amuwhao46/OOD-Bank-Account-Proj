@@ -15,15 +15,16 @@ using namespace std;
 
 class savingsAccount: public bankAccount {
     
-public:
-    void setInterest(int interestRate);
+public:    
+    void setInterest(double interestRate, double intPayment);
     
-    void getInterest();
+    double getInterest();
     
-    savingsAccount(int interestRate);
+    savingsAccount(double interestRate, double intPayment);
     
 private:
-    int interest;
+    double interest;
+    double payment;
 };
 
 #endif /* SavingsAccount_h */
