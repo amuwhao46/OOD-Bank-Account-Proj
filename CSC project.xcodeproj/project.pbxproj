@@ -128,8 +128,8 @@
 			isa = PBXGroup;
 			children = (
 				CAC9996F2624BD4700ECE04F /* main.cpp */,
-				CA6E26022628D7BE007E1ABD /* Implimentation */,
 				CA8CB3F82627D1A400421626 /* Header */,
+				CA6E26022628D7BE007E1ABD /* Implimentation */,
 			);
 			path = "CSC project";
 			sourceTree = "<group>";

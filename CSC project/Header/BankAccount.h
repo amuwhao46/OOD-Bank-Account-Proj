@@ -21,25 +21,19 @@ public:
     
     void setBankAccount(string accName, int accNum, double accBalance);
     
-    virtual void retrieveName(string accName) = 0;
+    virtual string retrieveName(string accName) = 0;
     
-    virtual void retrieveAccountNumber(int accNum) = 0;
+    virtual int retrieveAccountNumber(int accNum) = 0;
     
-    virtual void retrieveBalance(double accBalance) = 0;
+    virtual double retrieveBalance(double accBalance) = 0;
     
     int accountNum(int number) const;
     
     void withdrawMoney(int money);
     
-    void createMonthlyInst(int installments);
+    void createMonthlyStatement(int statement);
     
-    void getName();
-    
-    void getAccountNumber();
-    
-    void getBalance();
-    
-    bankAccount(string accName, int accNum, double accBalance);
+    bankAccount(string accName = "", int accNum = 0, double accBalance = 0);
     
 private:
     string name;

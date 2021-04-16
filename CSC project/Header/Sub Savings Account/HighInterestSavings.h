@@ -16,8 +16,10 @@ using namespace std;
 class highIntSavings: public savingsAccount {
     
 public:
+    void paysIntertest();
     
 private:
+    double interest;
     double balance;
     
 };
