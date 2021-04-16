@@ -27,7 +27,7 @@ public:
     CD(int numCDMonths, int interestRate, int CDMonths);
     
 private:
-    int numCDMonth;
+    int numCDMonth = 6;
     double interest;
     string CDMonth;
 };

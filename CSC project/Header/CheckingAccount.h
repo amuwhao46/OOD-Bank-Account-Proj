@@ -17,7 +17,9 @@ using namespace std;
 class checkingAccount: public bankAccount {
     
 public:
-    virtual void writeCheck() = 0;
+    virtual void writeCheck(double balance) = 0;
+    
+    checkingAccount(string accName, int accNum, double accBalance);
 
 };
 

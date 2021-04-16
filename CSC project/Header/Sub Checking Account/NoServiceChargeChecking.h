@@ -18,6 +18,7 @@ class noServiceChecking: public checkingAccount {
 public:
     void paysInterest();
     
+    void writeCheck();
     
 private:
     double interest;

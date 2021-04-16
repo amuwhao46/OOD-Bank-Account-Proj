@@ -12,7 +12,10 @@
 #include "CheckingAccount.h"
 using namespace std;
 
-void writeCheck() {
+checkingAccount::checkingAccount(string accName, int accNum, double accBalance) {
     
-    cout << "testing" << endl;
+    name = accName;
+    accountNumber = accNum;
+    balance = accBalance;
+    
 }

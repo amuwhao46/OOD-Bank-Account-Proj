@@ -16,7 +16,22 @@ using namespace std;
 class serviceChecking: public checkingAccount {
     
 public:
+    double getServiceChargeAccount();
+
+    void setServiceChargeAccount();
+    
+    void setServiceChargeChecks();
+
+    double getServiceChargeChecks();
+
+    int getNumberOfChecksWritten();
+
+    void setNumberOfChecksWritten(int );
+
     void checksPerMonth() const;
+    
+    void writeCheck();
+    
     
     
 private:

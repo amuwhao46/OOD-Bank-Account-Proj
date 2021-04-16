@@ -19,7 +19,7 @@ class bankAccount {
 public:
     void setBankAccount(string accName, int accNum, double accBalance);
     
-    virtual void createMonthlyStatement(int statement) = 0;
+    virtual void createMonthlyStatement() = 0;
     
     virtual double retrieveBalance(double accBalance);
     
@@ -33,10 +33,9 @@ public:
     
     bankAccount(string accName = "", int accNum = 0, double accBalance = 0);
     
-private:
+protected:
     string name;
     int accountNumber;
-    int installment;
     double balance;
     
 };
