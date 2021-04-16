@@ -11,3 +11,8 @@
 #include <iomanip> // For formatted output
 #include "CheckingAccount.h"
 using namespace std;
+
+void writeCheck() {
+    
+    cout << "testing" << endl;
+}

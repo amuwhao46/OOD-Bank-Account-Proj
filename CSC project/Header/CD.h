@@ -18,18 +18,18 @@ class CD: public bankAccount {
 public:
     void setCD(int numCDMonths, int interestRate, int CDMonths);
     
-    void getNumCDMonths();
+    int getNumCDMonths();
     
-    void getInterestRate();
+    double getInterestRate();
     
-    void getCDMonths();
+    string getCDMonths();
     
     CD(int numCDMonths, int interestRate, int CDMonths);
     
 private:
     int numCDMonth;
     int interest;
-    int CDMonth;
+    string CDMonth;
 };
 
 #endif /* CD_h */
