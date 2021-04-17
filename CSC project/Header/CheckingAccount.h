@@ -19,7 +19,6 @@ class checkingAccount: public bankAccount {
 public:
     virtual void writeCheck(double balance) = 0;
 
-    checkingAccount(string accName, int accNum, double accBalance);
 };
 
 #endif /* CheckingAccount_h */

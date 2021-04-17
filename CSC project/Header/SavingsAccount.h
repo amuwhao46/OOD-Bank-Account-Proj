@@ -24,7 +24,6 @@ public:
     
     savingsAccount(double interestRate, double intPayment);
     
-    virtual void createMonthlyStatement();
     
 private:
     double interest;

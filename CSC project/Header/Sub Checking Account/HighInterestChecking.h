@@ -15,14 +15,14 @@ using namespace std;
 
 class highInterestChecking: public noServiceChecking {
 public:
-    void setInterestRate(double);
+    void setInterestRate(double interest);
     
     double getInterestRate();
 
     
 private:
-    double INTEREST_RATE = 0.05;
-    double MIN_BALANCE = 5000.00;
+    double INTEREST_RATE = 0.03;
+    double MIN_BALANCE = 500.00;
 };
 
 #endif /* HighInterestChecking_h */

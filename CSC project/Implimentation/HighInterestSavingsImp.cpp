@@ -12,7 +12,12 @@
 #include "HighInterestSavings.h"
 using namespace std;
 
-void highIntSavings::paysIntertest() {
+void highIntSavings::setInterest(double interestRate) {
     
+    interest = interestRate;
+}
+
+double highIntSavings::getInterest() {
     
+    return interest;
 }

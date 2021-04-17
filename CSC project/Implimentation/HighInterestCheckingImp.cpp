@@ -12,3 +12,12 @@
 #include "HighInterestChecking.h"
 using namespace std;
 
+void highInterestChecking::setInterestRate(double interest) {
+    
+    INTEREST_RATE = interest;
+}
+
+double highInterestChecking::getInterestRate() {
+    
+    return INTEREST_RATE;
+}

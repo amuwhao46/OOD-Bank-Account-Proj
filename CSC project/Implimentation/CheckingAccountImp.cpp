@@ -12,10 +12,4 @@
 #include "CheckingAccount.h"
 using namespace std;
 
-checkingAccount::checkingAccount(string accName, int accNum, double accBalance) {
-    
-    name = accName;
-    accountNumber = accNum;
-    balance = accBalance;
-    
-}
+
