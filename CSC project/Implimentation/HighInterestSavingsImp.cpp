@@ -11,3 +11,8 @@
 #include <iomanip> // For formatted output
 #include "HighInterestSavings.h"
 using namespace std;
+
+void highIntSavings::paysIntertest() {
+    
+    
+}

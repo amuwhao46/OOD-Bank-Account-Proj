@@ -18,6 +18,7 @@ class highIntSavings: public savingsAccount {
 public:
     void paysIntertest();
     
+    highIntSavings(string accName, int accNum, double accBalance);
 private:
     double interest;
     double balance;

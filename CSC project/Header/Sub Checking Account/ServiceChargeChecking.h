@@ -32,7 +32,7 @@ public:
     
     void writeCheck();
     
-    
+    serviceChecking(string accName, int accNum, double accBalance);
     
 private:
     int writtenChecks;

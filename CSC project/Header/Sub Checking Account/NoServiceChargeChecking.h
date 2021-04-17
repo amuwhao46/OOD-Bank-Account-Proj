@@ -16,13 +16,22 @@ using namespace std;
 class noServiceChecking: public checkingAccount {
     
 public:
+    double getMinimumBalance();
+    
+    void setMinimumBalance(double accBalance);
+    
+    void withdraw(double accBalance);
+    
     void paysInterest();
     
     void writeCheck();
     
+    noServiceChecking(string accName, int accNum, double accBalance);
+    
+    
 private:
-    double interest;
-    double balance;
+    double interest = .05;
+    double minBalance = 500;
 };
 
 #endif /* NoServiceChargeChecking_h */

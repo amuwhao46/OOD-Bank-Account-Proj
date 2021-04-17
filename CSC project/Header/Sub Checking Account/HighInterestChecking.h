@@ -18,8 +18,9 @@ class highIntChecking: public noServiceChecking {
 public:
     
 private:
-    double highInterest;
-    double highBalance;
+    void setInterestRate(double accBalance);
+    
+    double getInterestRate();
 };
 
 #endif /* HighInterestChecking_h */
