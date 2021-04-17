@@ -15,7 +15,9 @@ using namespace std;
 
 class savingsAccount: public bankAccount {
     
-public:    
+public:
+    virtual void writeCheck(double balance) = 0;
+    
     void setInterest(double interestRate, double intPayment);
     
     double getInterest();

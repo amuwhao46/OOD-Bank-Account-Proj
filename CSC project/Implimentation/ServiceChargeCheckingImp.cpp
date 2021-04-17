@@ -11,3 +11,33 @@
 #include <iomanip> // For formatted output
 #include "ServiceChargeChecking.h"
 using namespace std;
+
+void ServiceChecking::setServiceChargeAccount() {
+    
+    
+}
+
+void ServiceChecking::setServiceChargeChecks() {
+    
+    
+}
+
+void ServiceChecking::setNumberOfChecksWritten() {
+    
+    
+}
+
+double ServiceChecking::getServiceChargeAccount() {
+    
+    return serviceChargeAccount;
+}
+
+double ServiceChecking::getServiceChargeChecks() {
+    
+    return serviceChargeCheck;
+}
+
+int ServiceChecking::getNumberOfChecksWritten() {
+    
+    return numberOfChecksWritten;
+}
