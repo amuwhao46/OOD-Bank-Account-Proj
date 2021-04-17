@@ -12,72 +12,44 @@
 #include "BankAccount.h"
 using namespace std;
 
-//void bankAccount::setBankAccount(string accName, int accNum, double accBalance) {
-//    
-//    name = accName;
-//    accountNumber = accNum;
-//    balance = accBalance;
-//    
-//}
-//
-//double bankAccount::retrieveBalance(double accBalance) {
-//    
-//    return balance;
-//}
-//
-//void bankAccount::depositMoney(double deposit) {
-//    
-//    balance += deposit;
-//}
-//
-//void bankAccount::withdrawMoney(int withdraw) {
-//    
-//    balance -= withdraw;
-//}
-//
-//string bankAccount::retrieveName(string accName) {
-//    
-//    return name;
-//}
-//
-//int bankAccount::retrieveAccountNumber(int accNum) {
-//    
-//    return accountNumber;
-//}
-
-void bankAccount::withdrawMoney(double accbalance) {
-    
-    balance = accbalance;
+void bankAccount::print()
+{
+    cout << name << "" << accountNum << " Total Balance: $" << balance;
 }
 
-void bankAccount::depositMoney(double accbalance) {
-    balance = accbalance;
+void bankAccount::withdrawMoney(double amt)
+{
+    balance -= amt;
 }
 
-double bankAccount::retrieveBalance() {
-    
+int bankAccount::getAccountNumber()
+{
+    return accountNum;
+}
+
+double bankAccount::getBalance()
+{
     return balance;
 }
 
-int bankAccount::retrieveAccountNumber() {
-    
-    return accountNumber;
-}
-
-void bankAccount::setName(string accName) {
-    
-    name = accName;
-}
-
-string bankAccount::retrieveName() {
-    
+string bankAccount::getName()
+{
     return name;
 }
 
-bankAccount::bankAccount(string accName, int accNum, double accBalance) {
-    
+void bankAccount::setName(string n)
+{
+    name = n;
+}
+
+void bankAccount::deposit(double amt)
+{
+    balance = balance + amt;
+}
+
+bankAccount::bankAccount(string accName, int accNum, double accBalance)
+{
     name = accName;
-    accountNumber = accNum;
+    accountNum = accNum;
     balance = accBalance;
-    
 }

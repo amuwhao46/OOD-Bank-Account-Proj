@@ -12,12 +12,32 @@
 #include "HighInterestSavings.h"
 using namespace std;
 
-void highIntSavings::setInterest(double interestRate) {
-    
-    interest = interestRate;
+double highInterestSavings::getMinBal()
+{
+    return minimumBalance;
 }
 
-double highIntSavings::getInterest() {
-    
-    return interest;
+bool highInterestSavings::testMinBal(double amount)
+{
+    return (balance - amount >= minimumBalance);
+}
+
+void highInterestSavings::withdraw(double amount)
+{
+    if (testMinBal(amount))
+    {
+        balance = balance - amount;
+    }
+}
+
+void highInterestSavings::print()
+{
+    cout << "High- Interest Savings: " << getName() << endl;
+    cout << "Account Number of User: " << getAccountNumber() << endl;
+    cout << "Tot Balance in Account: " << getBalance() << endl;
+}
+
+highInterestSavings::highInterestSavings(string accName, int accNum, double accBalance,    double intRate, double minBal):savingsAccount(accName, accNum, accBalance, intRate)
+{
+    minimumBalance = minBal;
 }

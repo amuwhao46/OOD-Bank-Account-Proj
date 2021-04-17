@@ -12,32 +12,76 @@
 #include "ServiceChargeChecking.h"
 using namespace std;
 
-void ServiceChecking::setServiceChargeAccount() {
-    
-    
+void serviceCharge::statement()
+{
+    finalCharge();
 }
 
-void ServiceChecking::setServiceChargeChecks() {
-    
-    
+void serviceCharge::print()
+{
+    cout << "Serv - Charge Checking: " << getName() << endl;
+    cout << "Account Number of User: " << getAccountNumber() << endl;
+    cout << "Tot Balance in Account: " << getBalance() << endl;
 }
 
-void ServiceChecking::setNumberOfChecksWritten() {
-    
-    
+double serviceCharge::getServiceChargeAmount()
+{
+    return serviceChargeAmount;
 }
 
-double ServiceChecking::getServiceChargeAccount() {
-    
-    return serviceChargeAccount;
+double serviceCharge::getServiceChargeCheck()
+{
+    return servChargeChecking;
 }
 
-double ServiceChecking::getServiceChargeChecks() {
-    
-    return serviceChargeCheck;
+int serviceCharge::getNumOfChecks()
+{
+    return totalChecks;
 }
 
-int ServiceChecking::getNumberOfChecksWritten() {
-    
-    return numberOfChecksWritten;
+void serviceCharge::setServiceChargeAmount(double amount)
+{
+    serviceChargeAmount = amount;
+}
+
+void serviceCharge::setServiceChargeCheck(double amount)
+{
+    servChargeChecking = amount;
+}
+
+void serviceCharge::setNumOfChecks(int checks)
+{
+    totalChecks = checks;
+}
+
+void serviceCharge::finalCharge()
+{
+    balance = balance - serviceChargeAmount;
+}
+
+void serviceCharge::writeCheck(double amount)
+{
+    if (totalChecks < MAX_NUM_OF_CHECKS)
+    {
+        balance = balance - amount;
+    }
+    else
+    {
+        balance = balance - amount - servChargeChecking;
+    }
+    totalChecks++;
+}
+
+serviceCharge::serviceCharge(string n, int accNum, double accBal):checkingAccount(n,accNum,accBal)
+{
+    serviceChargeAmount = ACCT_SERV_CHRGE;
+    totalChecks = 0;
+    servChargeChecking = 0;
+}
+
+serviceCharge::serviceCharge(string n, int accNum, double accBal, double chargeAmount, double check) :checkingAccount(n, accNum, accBal)
+{
+    serviceChargeAmount = chargeAmount;
+    totalChecks = 0;
+    servChargeChecking = check;
 }

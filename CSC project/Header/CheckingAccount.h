@@ -14,11 +14,11 @@
 using namespace std;
 
 // Abstract class
-class checkingAccount: public bankAccount {
-    
+class checkingAccount: public bankAccount
+{
 public:
-    virtual void writeCheck(double balance) = 0;
-
+    virtual void writeCheck(double amount) = 0;
+    checkingAccount(string accName, int accNum, double accBalance);
 };
 
 #endif /* CheckingAccount_h */

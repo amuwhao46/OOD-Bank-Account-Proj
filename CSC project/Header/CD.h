@@ -13,23 +13,42 @@
 #include "BankAccount.h"
 using namespace std;
 
-class CD: public bankAccount {
-    
+class CD: public bankAccount
+{
 public:
-    void setCD(int numCDMonths, int interestRate, int CDMonths);
+    double getInterestRate();
     
-    int getNumCDMonths();
+    void setIntesrestRate(double rate);
     
-    double getInterestRate() const;
+    double getMonth();
     
-    string getCDMonths();
+    void setMonth(int month);
     
-    CD(int numCDMonths, int interestRate, int CDMonths);
+    double getMaturityMonth();
+    
+    void setMaturityMonth(int matMonth);
+    
+    void interestFinal();
+    
+    void withdraw();
+    
+    void withdraw(double amount);
+    
+    void statement();
+    
+    void print();
+    
+    CD(string accName, int accNum, double accBalance);
+    
+    CD(string accName, int accNum, double accBalance, double interestRate, int maturityMonth);
     
 private:
-    int numCDMonth = 6;
+    const double INTEREST_RATE;
+    const int NUM_MAT_MONTHS;
+    int maturityMonth;
+    int CDMonth;
     double interest;
-    string CDMonth;
+
 };
 
 #endif /* CD_h */

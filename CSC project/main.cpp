@@ -30,16 +30,11 @@ using namespace std; // So "std::cout" may be abbreviated to "cout"
 int main()
 {
 
-    // Declare variables
+    bankAccount accounts;
+    
+    
 
 
-    // Show application header
-    cout << "Welcome to my Application!" << endl;
-    cout << "--------------------------" << endl << endl;
-
-
-    // Show application close
-    cout << "\nEnd of my Application" << endl;
 
 }
 

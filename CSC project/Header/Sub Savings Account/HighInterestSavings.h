@@ -13,16 +13,22 @@
 #include "SavingsAccount.h"
 using namespace std;
 
-class highIntSavings: public savingsAccount {
-    
+class highInterestSavings : public savingsAccount
+{
 public:
-    void setInterest(double interestRate);
+    double getMinBal();
     
-    double getInterest();
+    bool testMinBal(double amount);
+    
+    virtual void withdraw(double amount);
+    
+    virtual void print();
+    
+    highIntSavAcct(string accName, int accNum, double accBalance, double intRate, double minBal);
 
-private:
+protected:
+    double minimumBalance;
     double interest;
-    
-};
 
+};
 #endif /* HighInterestSavings_h */

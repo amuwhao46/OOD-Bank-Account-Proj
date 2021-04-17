@@ -14,44 +14,31 @@
 using namespace std;
 
 // Abstract class
-class bankAccount {
-    
+class bankAccount
+{
 public:
-//    void setBankAccount(string accName, int accNum, double accBalance);
-//
-//    virtual void createMonthlyStatement() = 0;
-//
-//    virtual double retrieveBalance(double accBalance);
-//
-//    virtual void depositMoney(double deposit);
-//
-//    virtual void withdrawMoney(int withdraw);
-//
-//    string retrieveName(string accName);
-//
-//    int retrieveAccountNumber(int accNum);
+    virtual void print();
     
-    virtual void withdrawMoney(double accbalance);
+    virtual void withdrawMoney(double amount);
     
-    virtual void depositMoney(double accbalance);
+    virtual void statement() = 0;
     
-    virtual double retrieveBalance();
+    int getAccountNumber();
     
-    virtual void createMonthlyStatement() = 0;
+    double getBalance();
     
-    int retrieveAccountNumber();
+    string getName();
     
     void setName(string accName);
     
-    string retrieveName();
+    void deposit(double amount);
     
     bankAccount(string accName = "", int accNum = 0, double accBalance = 0);
-    
-protected:
-    string name;
-    int accountNumber;
-    double balance;
-    
-};
 
+protected:
+    int accountNum;
+    double balance;
+    string name;
+
+};
 #endif /* BankAccount_h */

@@ -12,32 +12,78 @@
 #include "CD.h"
 using namespace std;
 
-void CD::setCD(int numCDMonths, int interestRate, int CDMonths) {
-    
-    numCDMonth = numCDMonths;
-    interest = interestRate;
-    CDMonth = CDMonths;
+double CD::getInterestRate() const
+{
+    return interestRate;
 }
 
-int CD::getNumCDMonths() {
-    
-    return numCDMonth;
+void CD::setIntesrestRate(double rate)
+{
+    interestRate = rate;
 }
 
-double CD::getInterestRate() const {
-    
-    return interest;
-}
-
-string CD::getCDMonths() {
-    
+double CD::getMonth()
+{
     return CDMonth;
 }
 
-CD::CD(int numCDMonths, int interestRate, int CDMonths) {
-    
-    numCDMonth = numCDMonths;
-    interest = interestRate;
-    CDMonth = CDMonths;
-    
+void CD::setMonth(int month)
+{
+    CDMonth = month;
+}
+
+double CD::getMaturityMonth()
+{
+    return maturityMonth;
+}
+
+void CD::setMaturityMonth(int month)
+{
+    maturityMonth = month;
+}
+
+void CD::interestFinal()
+{
+    balance += (balance * interestRate);
+}
+
+void CD::withdraw()
+{
+    if (CDMonth > maturityMonth)
+    {
+        balance = 0;
+    }
+    else
+        cout << "Certificate of Deposit has not been matured. No withdrawal allowed." << endl;
+}
+
+void CD::withdraw(double amount)
+{
+
+}
+
+void CD::statement()
+{
+    interestFinal();
+}
+
+void CD::print()
+{
+    cout << "Certificate of Deposit: " << getName() << endl;
+    cout << "Account Number of User: " << getAccountNumber() << endl;
+    cout << "Tot Balance in Account: " << getBalance() << endl;
+}
+
+CD::CD(string accName, int accNum, double accBalance):bankAccount(accName, accNum, accBalance)
+{
+    interestRate = INTEREST_RATE;
+    maturityMonth = NUM_MAT_MONTHS;
+    CDMonth = 0;
+}
+
+CD::CD(string accName, int accNum, double accBalance, double interestRate, int mMonth):bankAccount(accName, accNum, accBalance)
+{
+    interestRate = interestRate;
+    maturityMonth = mMonth;
+    CDMonth = 0;
 }

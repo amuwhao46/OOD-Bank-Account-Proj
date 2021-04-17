@@ -12,21 +12,39 @@
 #include "SavingsAccount.h"
 using namespace std;
 
-void savingsAccount::setInterest(double interestRate, double intPayment) {
-    
-    interest = interestRate;
-    payment = intPayment;
-    
-    payment = (interest * balance) + balance;
-}
-
-double savingsAccount::getInterest() {
-    
+double savingsAccount::getInterestRate()
+{
     return interest;
 }
 
-savingsAccount::savingsAccount(double interestRate, double intPayment) {
-    
-    interest = interestRate;
-    payment = intPayment;
+void savingsAccount::setInterestRate(double rate)
+{
+    interest = rate;
+}
+
+void savingsAccount::finalInterest()
+{
+    balance = balance + (balance * interest);
+}
+
+void savingsAccount::statement()
+{
+    finalInterest();
+}
+
+void savingsAccount::print()
+{
+    cout << "Name on Saving Account: " << getName() << endl;
+    cout << "Account Number of User: " << getAccountNumber() << endl;
+    cout << "Tot Balance in Account: " << getBalance() << endl;
+}
+
+savingsAccount::savingsAccount(string accName, int accNum, double accBalance) : bankAccount(accName, accNum, accBalance)
+{
+    interest = INT_RATE;
+}
+
+savingsAccount::savingsAccount(string accName, int accNum, double accBalance, double intRate): bankAccount(accName, accNum, accBalance)
+{
+    setInterestRate(intRate);
 }

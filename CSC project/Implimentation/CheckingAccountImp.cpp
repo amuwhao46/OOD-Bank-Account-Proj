@@ -12,4 +12,7 @@
 #include "CheckingAccount.h"
 using namespace std;
 
+checkingAccount::checkingAccount(string accName, int accNum, double accBalance)
+{
 
+}

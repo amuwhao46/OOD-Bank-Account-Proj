@@ -39,31 +39,43 @@ using namespace std;
 //    int month;
 //};
 
-class ServiceChecking: public checkingAccount
+class serviceCharge: public checkingAccount
 {
 public:
-    void setServiceChargeAccount();
+    virtual void statement();
     
-    void setServiceChargeChecks();
+    virtual void print();
     
-    void setNumberOfChecksWritten();
+    double getServiceChargeAmount();
     
-    double getServiceChargeAccount();
+    double getServiceChargeCheck();
+    
+    int getNumOfChecks();
+    
+    void setServiceChargeAmount(double amount);
+    
+    void setServiceChargeCheck(double amount);
+    
+    void setNumOfChecks(int checks);
+    
+    void finalCharge();
+    
+    void writeCheck(double amountt);
+    
+    serviceCharge(string accName, int accNum, double accBalance);
+    
+    serviceCharge(string accName, int accNum, double accBalance, double chargeAmount, double check);
 
-    double getServiceChargeChecks();
-
-    int getNumberOfChecksWritten();
-
-    void writeCheck();
-    
 protected:
-    int numberOfChecksWritten;
-    double serviceChargeAccount;
-    double serviceChargeCheck;
+    int totalChecks;
+    double serviceChargeAmount;
+    double servChargeChecking;
+    
 
 private:
-    const int MAX_NUM_CHECKS = 10;
-    const double SERVICE_CHARGE = 18;
+    const int MAX_NUM_OF_CHECKS = 10;
+    const double SERV_CHARGE_NUM_CHECKS = 6;
+    const double ACCT_SERV_CHRGE = 7;
 };
 
 #endif /* ServiceChargeChecking_h */
