@@ -13,14 +13,16 @@
 #include "NoServiceChargeChecking.h"
 using namespace std;
 
-class highIntChecking: public noServiceChecking {
-    
+class highInterestChecking: public noServiceChecking {
 public:
-    
-private:
-    void setInterestRate(double accBalance);
+    void setInterestRate(double);
     
     double getInterestRate();
+
+    
+private:
+    double INTEREST_RATE = 0.05;
+    double MIN_BALANCE = 5000.00;
 };
 
 #endif /* HighInterestChecking_h */

@@ -14,15 +14,20 @@ using namespace std;
 
 double noServiceChecking::getMinimumBalance() {
     
-    return minBalance;
+    return minimumBalance;
 }
 
-void noServiceChecking::setMinimumBalance(double accBalance) {
+void noServiceChecking::setMinimumBalance(double balance) {
     
-    minBalance = accBalance;
+    minimumBalance = balance;
 }
 
-void noServiceChecking::withdraw(double accBalance) {
+void noServiceChecking::writeCheck(double balance) {
     
-    minBalance -= accBalance;
+    cout << "something" << endl;
+}
+
+void noServiceChecking::withdrawMoney(double balance) {
+    
+    cout << "something" << endl;
 }

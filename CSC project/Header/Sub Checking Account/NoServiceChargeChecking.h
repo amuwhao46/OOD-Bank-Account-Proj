@@ -18,20 +18,19 @@ class noServiceChecking: public checkingAccount {
 public:
     double getMinimumBalance();
     
-    void setMinimumBalance(double accBalance);
+    void setMinimumBalance(double balance);
     
-    void withdraw(double accBalance);
+    void writeCheck(double balance);
     
-    void paysInterest();
-    
-    void writeCheck();
-    
-    noServiceChecking(string accName, int accNum, double accBalance);
-    
+    void withdrawMoney(double balance);
+        
+protected:
+    double minimumBalance;
+    double interestRate;
     
 private:
-    double interest = .05;
-    double minBalance = 500;
+    double INTEREST_RATE = .05;
+    double MIN_BALANCE = 500;
 };
 
 #endif /* NoServiceChargeChecking_h */

@@ -55,15 +55,15 @@ public:
     int getNumberOfChecksWritten();
 
     void writeCheck();
-
-private:
-    double ACCOUNT_SERVICE_CHARGE = 10.00;
-    int MAXIMUM_NUM_OF_CHECKS = 5;
-
+    
 protected:
+    int numberOfChecksWritten;
     double serviceChargeAccount;
     double serviceChargeCheck;
-    int numberOfChecksWritten;
+
+private:
+    const int MAX_NUM_CHECKS = 10;
+    const double SERVICE_CHARGE = 18;
 };
 
 #endif /* ServiceChargeChecking_h */
