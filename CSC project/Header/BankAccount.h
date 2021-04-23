@@ -19,26 +19,28 @@ class bankAccount
 public:
     virtual void print();
     
-    virtual void withdrawMoney(double amount);
-    
-    virtual void statement() = 0;
-    
     int getAccountNumber();
     
     double getBalance();
     
     string getName();
     
-    void setName(string accName);
+    void setName(string name);
     
-    void deposit(double amount);
+    void makeDeposit(double amount);
     
-    bankAccount(string accName = "", int accNum = 0, double accBalance = 0);
+    virtual void withdrawMoney(double amount);
+    
+    // Pure virtual function
+    virtual void statement() = 0;
+    
+    // Constructor
+    bankAccount(string name = "", int num = 0, double accBal = 0);
 
 protected:
-    int accountNum;
+    int accNum;
     double balance;
-    string name;
+    string accName;
 
 };
 #endif /* BankAccount_h */

@@ -17,8 +17,10 @@ using namespace std;
 class checkingAccount: public bankAccount
 {
 public:
+    
     virtual void writeCheck(double amount) = 0;
-    checkingAccount(string accName, int accNum, double accBalance);
+    
+    // Constructor
+    checkingAccount(string name, int num, double accBal);
 };
-
 #endif /* CheckingAccount_h */

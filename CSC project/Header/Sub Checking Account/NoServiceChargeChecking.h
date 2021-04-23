@@ -13,14 +13,16 @@
 #include "CheckingAccount.h"
 using namespace std;
 
-class noServiceCharge: public checkingAccount
+class noServiceChargeChecking: public checkingAccount
 {
 public:
-    double getMinBalance();
+    double getMinimumBalance();
     
-    void setMinBalance(double min);
+    void setMinimumBalance(double minimum);
     
-    bool verMinBal(double amount);
+    bool verMinimumBal(double amount);
+    
+    virtual void monthlyStatement();
     
     void writeCheck(double amount);
     
@@ -28,15 +30,18 @@ public:
     
     virtual void print();
     
-    noServiceCharge(string accName, int accNum, double accBalance);
+    // Constructor
+    noServiceChargeChecking(string name, int num, double accBal);
     
-    noServiceCharge(string accName, int accNum, double accBalance, double min, double interestRate);
+    // Holds interest rate
+    noServiceChargeChecking(string name, int num, double accBal, double minimum, double intRate);
+    
 protected:
     double minimumBalance;
     double interestRate;
 
 private:
-    const double INT_RATE = 0.07;
+    const double INT_RATE = 0.035;
     const double MIN_BAL = 500;
 };
 #endif /* NoServiceChargeChecking_h */

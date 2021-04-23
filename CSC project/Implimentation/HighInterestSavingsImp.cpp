@@ -12,19 +12,19 @@
 #include "HighInterestSavings.h"
 using namespace std;
 
-double highInterestSavings::getMinBal()
+double highInterestSavings::getMinBalance()
 {
     return minimumBalance;
 }
 
-bool highInterestSavings::testMinBal(double amount)
+bool highInterestSavings::verMinBalance(double amount)
 {
     return (balance - amount >= minimumBalance);
 }
 
 void highInterestSavings::withdraw(double amount)
 {
-    if (testMinBal(amount))
+    if (verMinBalance(amount))
     {
         balance = balance - amount;
     }
@@ -32,12 +32,18 @@ void highInterestSavings::withdraw(double amount)
 
 void highInterestSavings::print()
 {
-    cout << "High- Interest Savings: " << getName() << endl;
-    cout << "Account Number of User: " << getAccountNumber() << endl;
-    cout << "Tot Balance in Account: " << getBalance() << endl;
+    cout << "Account Number: " << getAccountNumber() << endl;
+    cout << "Name under High Interest Savings: " << getName() << endl;
+    cout << "Balance in High Interest Savings: " << getBalance() << endl;
 }
 
-highInterestSavings::highInterestSavings(string accName, int accNum, double accBalance,    double intRate, double minBal):savingsAccount(accName, accNum, accBalance, intRate)
+highInterestSavings::highInterestSavings(string name, int num, double accBal): savingsAccount(name, num, accBal)
 {
-    minimumBalance = minBal;
+    minimumBalance = MIN_BALANCE;
+}
+
+highInterestSavings::highInterestSavings(string name, int num, double accBal,
+                               double intRate, double minBalance): savingsAccount(name, num, accBal, intRate)
+{
+    minimumBalance = minBalance;
 }

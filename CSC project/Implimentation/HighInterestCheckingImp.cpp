@@ -17,9 +17,9 @@ double highInterestChecking::getInterestRate()
     return interestRate;
 }
 
-void highInterestChecking::setInterestRate(double interest)
+void highInterestChecking::setInterestRate(double intRate)
 {
-    interestRate = interest;
+    interestRate = intRate;
 }
 
 void highInterestChecking::finalRate()
@@ -34,17 +34,17 @@ void highInterestChecking::statement()
 
 void highInterestChecking::print()
 {
-    cout << "High Interest Checking: " << getName() << endl;
-    cout << "Account Number of User: " << getAccountNumber() << endl;
-    cout << "Tot Balance in Account: " << getBalance() << endl;
+    cout << "Account Number: " << getAccountNumber() << endl;
+    cout << "Name under High Interest Checking: " << getName() << endl;
+    cout << "Balance in High Interest Checking: " << getBalance() << endl;
 }
 
-highInterestChecking::highInterestChecking(string accName, int accNum, double accBalance): highInterestChecking(accName, accNum, accBalance)
+highInterestChecking::highInterestChecking(string name, int num, double accBal): noServiceChargeChecking(name, num, accBal)
 {
     minimumBalance = MIN_BAL;
     interestRate = INT_RATE;
 }
 
-highInterestChecking::highInterestChecking(string accName, int accNum, double accBalance, double min, double interestRate):highInterestChecking(accName, accNum, accBalance, min, interestRate)
+highInterestChecking::highInterestChecking(string name, int num, double accBal, double minimum, double intRate): noServiceChargeChecking(name, num, accBal, minimum, intRate)
 {
 }

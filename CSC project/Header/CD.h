@@ -16,9 +16,9 @@ using namespace std;
 class CD: public bankAccount
 {
 public:
-    double getInterestRate();
+    double getInterestRate() const;
     
-    void setIntesrestRate(double rate);
+    void setInterestRate(double rate);
     
     double getMonth();
     
@@ -38,16 +38,19 @@ public:
     
     void print();
     
-    CD(string accName, int accNum, double accBalance);
+    // Constructor
+    CD(string name, int num, double accBal);
     
-    CD(string accName, int accNum, double accBalance, double interestRate, int maturityMonth);
+    // Holds interest rate & maturity month
+    CD(string name, int num, double accBal, double intRate, int matMon);
     
 private:
-    const double INTEREST_RATE;
-    const int NUM_MAT_MONTHS;
+    const double INT_RATE = 0.1;
+    const int NUM_OF_MAT_MONTHS = 12;
+    
     int maturityMonth;
-    int CDMonth;
-    double interest;
+    int certOfDepMonth;
+    double interestRate;
 
 };
 

@@ -14,17 +14,12 @@ using namespace std;
 
 void bankAccount::print()
 {
-    cout << name << "" << accountNum << " Total Balance: $" << balance;
-}
-
-void bankAccount::withdrawMoney(double amt)
-{
-    balance -= amt;
+    cout << accNum << ":" << accName << " Total Account Balance: $" << balance;
 }
 
 int bankAccount::getAccountNumber()
 {
-    return accountNum;
+    return accNum;
 }
 
 double bankAccount::getBalance()
@@ -34,22 +29,27 @@ double bankAccount::getBalance()
 
 string bankAccount::getName()
 {
-    return name;
+    return accName;
 }
 
-void bankAccount::setName(string n)
+void bankAccount::setName(string name)
 {
-    name = n;
+    accName = name;
 }
 
-void bankAccount::deposit(double amt)
+void bankAccount::makeDeposit(double amount)
 {
-    balance = balance + amt;
+    balance = balance + amount;
 }
 
-bankAccount::bankAccount(string accName, int accNum, double accBalance)
+void bankAccount::withdrawMoney(double amount)
 {
-    name = accName;
-    accountNum = accNum;
-    balance = accBalance;
+    balance -= amount;
+}
+
+bankAccount::bankAccount(string name, int num, double accBal)
+{
+    accName = name;
+    accNum = num;
+    balance = accBal;
 }

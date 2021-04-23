@@ -12,52 +12,57 @@
 #include "NoServiceChargeChecking.h"
 using namespace std;
 
-double noServiceCharge::getMinBalance()
+double noServiceChargeChecking::getMinimumBalance()
 {
     return minimumBalance;
 }
 
-void noServiceCharge::setMinBalance(double min)
+void noServiceChargeChecking::setMinimumBalance(double minimum)
 {
-    minimumBalance = min;
+    minimumBalance = minimum;
 }
 
-bool noServiceCharge::verMinBal(double amount)
+bool noServiceChargeChecking::verMinimumBal(double amount)
 {
     return (balance - amount >= minimumBalance);
 }
 
-void noServiceCharge::writeCheck(double amount)
+void noServiceChargeChecking::monthlyStatement()
 {
-    if (verMinBal(amount))
+
+}
+
+void noServiceChargeChecking::writeCheck(double amount)
+{
+    if (verMinimumBal(amount))
     {
         balance -= amount;
     }
 }
 
-void noServiceCharge::withdraw(double amount)
+void noServiceChargeChecking::withdraw(double amount)
 {
-    if (verMinBal(amount))
+    if (verMinimumBal(amount))
     {
         balance -= amount;
     }
 }
 
-void noServiceCharge::print()
+void noServiceChargeChecking::print()
 {
-    cout << "No Ser Charge Checking: " << getName() << endl;
-    cout << "Account Number of User: " << getAccountNumber() << endl;
-    cout << "Tot Balance in Account: " << getBalance() << endl;
+    cout << "Account Number: " << getAccountNumber() << endl;
+    cout << "Name under No Service Charge Checking: " << getName() << endl;
+    cout << "Balance in No Service Charge Checking: " << getBalance() << endl;
 }
 
-noServiceCharge::noServiceCharge(string n, int accNum, double accBal):checkingAccount(n,accNum,accBal)
+noServiceChargeChecking::noServiceChargeChecking(string name, int num, double accBal): checkingAccount(name, num, accBal)
 {
     minimumBalance = MIN_BAL;
     interestRate = INT_RATE;
 }
 
-noServiceCharge::noServiceCharge(string accName, int accNum, double accBalance, double min, double interestRate):checkingAccount(accName, accNum, accBalance)
+noServiceChargeChecking::noServiceChargeChecking(string name, int num, double accBal, double minimum, double intRate): checkingAccount(name, num, accBal)
 {
-    minimumBalance = min;
-    interestRate = interestRate;
+    minimumBalance = minimum;
+    interestRate = intRate;
 }

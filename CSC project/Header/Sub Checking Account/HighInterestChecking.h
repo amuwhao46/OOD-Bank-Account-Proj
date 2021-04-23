@@ -13,12 +13,12 @@
 #include "NoServiceChargeChecking.h"
 using namespace std;
 
-class highInterestChecking: public noServiceCharge
+class highInterestChecking: public noServiceChargeChecking
 {
 public:
     double getInterestRate();
     
-    void setInterestRate(double interestRate);
+    void setInterestRate(double intRate);
     
     void finalRate();
     
@@ -26,13 +26,15 @@ public:
     
     virtual void print();
     
-    highInterestChecking(string accName, int accNum, double accBalance);
+    // Constructor
+    highInterestChecking(string name, int num, double accBal);
     
-    highInterestChecking(string accName, int accNum, double accBalance, double min, double interestRate);
+    // Holds minimum balance and interest rate
+    highInterestChecking(string name, int num, double accBal, double minimum, double intRate);
 
 private:
-    const double INT_RATE = 0.03;
-    const double MIN_BAL = 1000;
+    const double INT_RATE = 0.06;
+    const double MIN_BAL = 3000;
 };
 
 #endif /* HighInterestChecking_h */

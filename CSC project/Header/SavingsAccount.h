@@ -13,27 +13,30 @@
 #include "BankAccount.h"
 using namespace std;
 
-class savingsAccount : public bankAccount
+class savingsAccount: public bankAccount
 {
 public:
     double getInterestRate();
     
     void setInterestRate(double rate);
     
-    void finalInterest();
+    void finalInt();
     
     virtual void statement();
     
     virtual void print();
     
-    savingsAccount(string n, int accNum, double accBal);
+    // Constructor
+    savingsAccount(string name, int num, double accBal);
     
-    savingsAccount(string n, int accNum, double accBal, double intRate);
+    // Holds interest rate
+    savingsAccount(string name, int num, double accBal, double intRate);
 
 protected:
     double interest;
 
 private:
-    const double INT_RATE = 0.045;
+    const double INT_RATE = 0.05;
 };
+
 #endif /* SavingsAccount_h */

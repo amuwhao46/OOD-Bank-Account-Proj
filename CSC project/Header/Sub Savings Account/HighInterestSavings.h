@@ -13,22 +13,31 @@
 #include "SavingsAccount.h"
 using namespace std;
 
-class highInterestSavings : public savingsAccount
+class highInterestSavings: public savingsAccount
 {
 public:
-    double getMinBal();
+    double getMinBalance();
     
-    bool testMinBal(double amount);
+    bool verMinBalance(double amount);
     
     virtual void withdraw(double amount);
     
     virtual void print();
     
-    highIntSavAcct(string accName, int accNum, double accBalance, double intRate, double minBal);
+    // Constructor
+    highInterestSavings(string name, int num, double accBal);
+    
+    // Holds interest rate and minimum balance
+    highInterestSavings(string name, int num, double accBal, double intRate, double minBal);
 
 protected:
     double minimumBalance;
     double interest;
 
+private:
+    const double MIN_BALANCE = 1000;
+    const double INT_RATE = 0.09;
+
 };
+
 #endif /* HighInterestSavings_h */

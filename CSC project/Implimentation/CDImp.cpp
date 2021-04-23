@@ -17,19 +17,19 @@ double CD::getInterestRate() const
     return interestRate;
 }
 
-void CD::setIntesrestRate(double rate)
+void CD::setInterestRate(double rate)
 {
     interestRate = rate;
 }
 
 double CD::getMonth()
 {
-    return CDMonth;
+    return certOfDepMonth;
 }
 
 void CD::setMonth(int month)
 {
-    CDMonth = month;
+    certOfDepMonth = month;
 }
 
 double CD::getMaturityMonth()
@@ -37,9 +37,9 @@ double CD::getMaturityMonth()
     return maturityMonth;
 }
 
-void CD::setMaturityMonth(int month)
+void CD::setMaturityMonth(int matMonth)
 {
-    maturityMonth = month;
+    maturityMonth = matMonth;
 }
 
 void CD::interestFinal()
@@ -49,12 +49,12 @@ void CD::interestFinal()
 
 void CD::withdraw()
 {
-    if (CDMonth > maturityMonth)
+    if (certOfDepMonth > maturityMonth)
     {
         balance = 0;
     }
     else
-        cout << "Certificate of Deposit has not been matured. No withdrawal allowed." << endl;
+        cout << "Withdrawal cannot be made at this time! Certificate of Deposit has not matured" << endl;
 }
 
 void CD::withdraw(double amount)
@@ -69,21 +69,21 @@ void CD::statement()
 
 void CD::print()
 {
-    cout << "Certificate of Deposit: " << getName() << endl;
-    cout << "Account Number of User: " << getAccountNumber() << endl;
-    cout << "Tot Balance in Account: " << getBalance() << endl;
+    cout << "Account Number: " << getAccountNumber() << endl;
+    cout << "Name under Certificate of Deposit: " << getName() << endl;
+    cout << "Balance in Certificate of Deposit: " << getBalance() << endl;
 }
 
-CD::CD(string accName, int accNum, double accBalance):bankAccount(accName, accNum, accBalance)
+CD::CD(string name, int num, double accBal): bankAccount(name, num, accBal)
 {
-    interestRate = INTEREST_RATE;
-    maturityMonth = NUM_MAT_MONTHS;
-    CDMonth = 0;
+    interestRate = INT_RATE;
+    maturityMonth = NUM_OF_MAT_MONTHS;
+    certOfDepMonth = 0;
 }
 
-CD::CD(string accName, int accNum, double accBalance, double interestRate, int mMonth):bankAccount(accName, accNum, accBalance)
+CD::CD(string name, int num, double accBal, double intRate, int matMonth): bankAccount(name, num, accBal)
 {
-    interestRate = interestRate;
-    maturityMonth = mMonth;
-    CDMonth = 0;
+    interestRate = intRate;
+    maturityMonth = matMonth;
+    certOfDepMonth = 0;
 }

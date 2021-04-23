@@ -13,69 +13,44 @@
 #include "CheckingAccount.h"
 using namespace std;
 
-//class serviceChecking: public checkingAccount {
-//
-//public:
-//    double getServiceChargeAccount();
-//
-//    void setServiceChargeAccount();
-//
-//    void setServiceChargeChecks();
-//
-//    double getServiceChargeChecks();
-//
-//    int getNumberOfChecksWritten();
-//
-//    void setNumberOfChecksWritten(int );
-//
-//    void checksPerMonth() const;
-//
-//    void writeCheck();
-//
-//    serviceChecking(string accName, int accNum, double accBalance);
-//
-//private:
-//    int writtenChecks;
-//    int month;
-//};
-
-class serviceCharge: public checkingAccount
+class serviceChargeChecking: public checkingAccount
 {
 public:
-    virtual void statement();
-    
-    virtual void print();
-    
     double getServiceChargeAmount();
     
     double getServiceChargeCheck();
     
-    int getNumOfChecks();
+    int getNumberOfChecks();
     
     void setServiceChargeAmount(double amount);
     
     void setServiceChargeCheck(double amount);
     
-    void setNumOfChecks(int checks);
+    void setNumberOfChecks(int total);
     
     void finalCharge();
     
-    void writeCheck(double amountt);
+    void writeCheck(double amount);
     
-    serviceCharge(string accName, int accNum, double accBalance);
+    virtual void statement();
     
-    serviceCharge(string accName, int accNum, double accBalance, double chargeAmount, double check);
+    virtual void print();
+    
+    // Constructor
+    serviceChargeChecking(string name, int num, double accBal);
+    
+    // Holds account charge and checks
+    serviceChargeChecking(string name, int num, double accBal, double chargeAmount, double check);
 
 protected:
-    int totalChecks;
+    int checksTotal;
     double serviceChargeAmount;
     double servChargeChecking;
     
 
 private:
-    const int MAX_NUM_OF_CHECKS = 10;
-    const double SERV_CHARGE_NUM_CHECKS = 6;
-    const double ACCT_SERV_CHRGE = 7;
+    const int MAX_NUM_CHECKS = 3;
+    const double SERV_CHARGE_NUM_CHECKS = 3;
+    const double ACCT_SERV_CHRGE = 6;
 };
-
 #endif /* ServiceChargeChecking_h */

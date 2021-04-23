@@ -12,56 +12,46 @@
 #include "ServiceChargeChecking.h"
 using namespace std;
 
-void serviceCharge::statement()
-{
-    finalCharge();
-}
+using namespace std;
 
-void serviceCharge::print()
-{
-    cout << "Serv - Charge Checking: " << getName() << endl;
-    cout << "Account Number of User: " << getAccountNumber() << endl;
-    cout << "Tot Balance in Account: " << getBalance() << endl;
-}
-
-double serviceCharge::getServiceChargeAmount()
+double serviceChargeChecking::getServiceChargeAmount()
 {
     return serviceChargeAmount;
 }
 
-double serviceCharge::getServiceChargeCheck()
+double serviceChargeChecking::getServiceChargeCheck()
 {
     return servChargeChecking;
 }
 
-int serviceCharge::getNumOfChecks()
+int serviceChargeChecking::getNumberOfChecks()
 {
-    return totalChecks;
+    return checksTotal;
 }
 
-void serviceCharge::setServiceChargeAmount(double amount)
+void serviceChargeChecking::setServiceChargeAmount(double amount)
 {
     serviceChargeAmount = amount;
 }
 
-void serviceCharge::setServiceChargeCheck(double amount)
+void serviceChargeChecking::setServiceChargeCheck(double amount)
 {
     servChargeChecking = amount;
 }
 
-void serviceCharge::setNumOfChecks(int checks)
+void serviceChargeChecking::setNumberOfChecks(int total)
 {
-    totalChecks = checks;
+    checksTotal = total;
 }
 
-void serviceCharge::finalCharge()
+void serviceChargeChecking::finalCharge()
 {
     balance = balance - serviceChargeAmount;
 }
 
-void serviceCharge::writeCheck(double amount)
+void serviceChargeChecking::writeCheck(double amount)
 {
-    if (totalChecks < MAX_NUM_OF_CHECKS)
+    if (checksTotal < MAX_NUM_CHECKS)
     {
         balance = balance - amount;
     }
@@ -69,19 +59,31 @@ void serviceCharge::writeCheck(double amount)
     {
         balance = balance - amount - servChargeChecking;
     }
-    totalChecks++;
+    checksTotal++;
 }
 
-serviceCharge::serviceCharge(string n, int accNum, double accBal):checkingAccount(n,accNum,accBal)
+void serviceChargeChecking::statement()
+{
+    finalCharge();
+}
+
+void serviceChargeChecking::print()
+{
+    cout << "Account Number: " << getAccountNumber() << endl;
+    cout << "Name under Service Charge Checking: " << getName() << endl;
+    cout << "Balance in Service Charge Checking: " << getBalance() << endl;
+}
+
+serviceChargeChecking::serviceChargeChecking(string name, int num, double accBal):checkingAccount(name, num, accBal)
 {
     serviceChargeAmount = ACCT_SERV_CHRGE;
-    totalChecks = 0;
+    checksTotal = 0;
     servChargeChecking = 0;
 }
 
-serviceCharge::serviceCharge(string n, int accNum, double accBal, double chargeAmount, double check) :checkingAccount(n, accNum, accBal)
+serviceChargeChecking::serviceChargeChecking(string name, int num, double accBal, double chargeAmount, double check): checkingAccount(name, num, accBal)
 {
     serviceChargeAmount = chargeAmount;
-    totalChecks = 0;
+    checksTotal = 0;
     servChargeChecking = check;
 }

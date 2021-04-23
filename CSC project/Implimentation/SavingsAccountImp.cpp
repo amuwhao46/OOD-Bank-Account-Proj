@@ -22,29 +22,29 @@ void savingsAccount::setInterestRate(double rate)
     interest = rate;
 }
 
-void savingsAccount::finalInterest()
+void savingsAccount::finalInt()
 {
     balance = balance + (balance * interest);
 }
 
 void savingsAccount::statement()
 {
-    finalInterest();
+    finalInt();
 }
 
 void savingsAccount::print()
 {
-    cout << "Name on Saving Account: " << getName() << endl;
-    cout << "Account Number of User: " << getAccountNumber() << endl;
-    cout << "Tot Balance in Account: " << getBalance() << endl;
+    cout << "Account Number: " << getAccountNumber() << endl;
+    cout << "Name on Savings Account: " << getName() << endl;
+    cout << "Balance in Savings Account: " << getBalance() << endl;
 }
 
-savingsAccount::savingsAccount(string accName, int accNum, double accBalance) : bankAccount(accName, accNum, accBalance)
+savingsAccount::savingsAccount(string name, int num, double accBal): bankAccount(name, num, accBal)
 {
     interest = INT_RATE;
 }
 
-savingsAccount::savingsAccount(string accName, int accNum, double accBalance, double intRate): bankAccount(accName, accNum, accBalance)
+savingsAccount::savingsAccount(string name, int num, double accBal, double intRate): bankAccount(name, num, accBal)
 {
     setInterestRate(intRate);
 }
